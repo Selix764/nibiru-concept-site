@@ -187,26 +187,7 @@ const Planet3 = styled(VioletPlanet)`
   animation-delay: 1.5s;
 `;
 
-const Stars = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    radial-gradient(2px 2px at 20px 30px, #eee, transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
-    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
-    radial-gradient(2px 2px at 160px 30px, #ddd, transparent),
-    radial-gradient(1px 1px at 180px 60px, rgba(255,255,255,0.7), transparent),
-    radial-gradient(2px 2px at 220px 20px, #ccc, transparent),
-    radial-gradient(1px 1px at 250px 90px, rgba(255,255,255,0.5), transparent),
-    radial-gradient(2px 2px at 280px 50px, #eee, transparent),
-    radial-gradient(1px 1px at 300px 10px, rgba(255,255,255,0.9), transparent);
-  background-repeat: repeat;
-  background-size: 300px 200px;
-  background-position: 0 0;
-  animation: twinkle 4s ease-in-out infinite;
-`;
+
 
 const HeroContent = styled(motion.div)`
   text-align: center;
@@ -222,6 +203,10 @@ const HeroTitle = styled(motion.h1)`
   font-weight: 800;
   color: var(--neon-pink);
   text-shadow: 
+    -1px -1px 0 rgba(255,255,255,0.8),
+    1px -1px 0 rgba(255,255,255,0.8),
+    -1px 1px 0 rgba(255,255,255,0.8),
+    1px 1px 0 rgba(255,255,255,0.8),
     0 0 10px rgba(255,125,220,0.8),
     0 0 20px rgba(255,125,220,0.6),
     0 0 30px rgba(255,125,220,0.4),
@@ -415,12 +400,7 @@ const Hero: React.FC = () => {
     }
   };
 
-  const handleEventsClick = () => {
-    const element = document.querySelector('#events');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+
 
   return (
     <HeroSection id="home" ref={sectionRef}>
@@ -430,7 +410,6 @@ const Hero: React.FC = () => {
           <SaturnRings />
         </Planet2>
         <Planet3 />
-        <Stars />
         {particles.map(particle => (
           <Particle
             key={particle.id}

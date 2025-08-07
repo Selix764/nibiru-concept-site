@@ -242,6 +242,10 @@ export const GlobalStyles = createGlobalStyle`
   @keyframes phosphorescentGlow {
     0%, 100% {
       text-shadow: 
+        -1px -1px 0 rgba(255,255,255,0.8),
+        1px -1px 0 rgba(255,255,255,0.8),
+        -1px 1px 0 rgba(255,255,255,0.8),
+        1px 1px 0 rgba(255,255,255,0.8),
         0 0 10px rgba(255,125,220,0.8),
         0 0 20px rgba(255,125,220,0.6),
         0 0 30px rgba(255,125,220,0.4),
@@ -253,6 +257,10 @@ export const GlobalStyles = createGlobalStyle`
     }
     50% {
       text-shadow: 
+        -1px -1px 0 rgba(255,255,255,0.9),
+        1px -1px 0 rgba(255,255,255,0.9),
+        -1px 1px 0 rgba(255,255,255,0.9),
+        1px 1px 0 rgba(255,255,255,0.9),
         0 0 15px rgba(255,125,220,1),
         0 0 25px rgba(255,125,220,0.8),
         0 0 35px rgba(255,125,220,0.6),
