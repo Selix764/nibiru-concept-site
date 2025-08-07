@@ -187,7 +187,33 @@ const Planet3 = styled(VioletPlanet)`
   animation-delay: 1.5s;
 `;
 
-
+const Stars = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 160px 30px, #ddd, transparent),
+    radial-gradient(1px 1px at 180px 60px, rgba(255,255,255,0.7), transparent),
+    radial-gradient(2px 2px at 220px 20px, #ccc, transparent),
+    radial-gradient(1px 1px at 250px 90px, rgba(255,255,255,0.5), transparent),
+    radial-gradient(2px 2px at 280px 50px, #eee, transparent),
+    radial-gradient(1px 1px at 300px 10px, rgba(255,255,255,0.9), transparent),
+    radial-gradient(1px 1px at 320px 50px, rgba(255,255,255,0.4), transparent),
+    radial-gradient(2px 2px at 350px 80px, #eee, transparent),
+    radial-gradient(1px 1px at 380px 20px, rgba(255,255,255,0.7), transparent),
+    radial-gradient(2px 2px at 400px 60px, #ddd, transparent),
+    radial-gradient(1px 1px at 420px 90px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 450px 30px, #ccc, transparent),
+    radial-gradient(1px 1px at 480px 70px, rgba(255,255,255,0.8), transparent);
+  background-repeat: repeat;
+  background-size: 500px 300px;
+  background-position: 0 0;
+  animation: twinkle 4s ease-in-out infinite;
+`;
 
 const HeroContent = styled(motion.div)`
   text-align: center;
@@ -409,7 +435,7 @@ const Hero: React.FC = () => {
         <Planet2>
           <SaturnRings />
         </Planet2>
-        <Planet3 />
+        <Stars />
         {particles.map(particle => (
           <Particle
             key={particle.id}
@@ -468,7 +494,7 @@ const Hero: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Rezervă Acum
+            Rezervă Acum Bilet
           </PrimaryButton>
           <SecondaryLink
             href="#services"

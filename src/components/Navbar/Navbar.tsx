@@ -157,13 +157,14 @@ const Hamburger = styled.div<{ isOpen: boolean }>`
   }
 `;
 
-const navItems = [
-  { href: '#home', label: 'Acasă' },
-  { href: '#services', label: 'Servicii' },
-  { href: '#location', label: 'Locație' },
-  { href: '#partners', label: 'Parteneri' },
-  { href: '#contact', label: 'Contact' }
-];
+  const navItems = [
+    { href: '#home', label: 'Acasă' },
+    { href: '#about', label: 'Despre Noi' },
+    { href: '#services', label: 'Servicii' },
+    { href: '#location', label: 'Locație' },
+    { href: '#partners', label: 'Parteneri' },
+    { href: '#contact', label: 'Contact' }
+  ];
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
