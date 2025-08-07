@@ -237,4 +237,30 @@ export const GlobalStyles = createGlobalStyle`
       transform: scale(1); 
     }
   }
+
+  /* Phosphorescent glow animation */
+  @keyframes phosphorescentGlow {
+    0%, 100% {
+      text-shadow: 
+        0 0 10px rgba(255,125,220,0.8),
+        0 0 20px rgba(255,125,220,0.6),
+        0 0 30px rgba(255,125,220,0.4),
+        0 0 40px rgba(255,125,220,0.3),
+        0 0 50px rgba(255,125,220,0.2),
+        0 0 60px rgba(255,125,220,0.1),
+        0 2px 4px rgba(0,0,0,0.4);
+      filter: drop-shadow(0 0 20px rgba(255,125,220,0.5));
+    }
+    50% {
+      text-shadow: 
+        0 0 15px rgba(255,125,220,1),
+        0 0 25px rgba(255,125,220,0.8),
+        0 0 35px rgba(255,125,220,0.6),
+        0 0 45px rgba(255,125,220,0.4),
+        0 0 55px rgba(255,125,220,0.3),
+        0 0 65px rgba(255,125,220,0.2),
+        0 2px 4px rgba(0,0,0,0.4);
+      filter: drop-shadow(0 0 25px rgba(255,125,220,0.7));
+    }
+  }
 `; 

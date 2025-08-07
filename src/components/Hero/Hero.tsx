@@ -218,23 +218,31 @@ const HeroContent = styled(motion.div)`
 
 const HeroTitle = styled(motion.h1)`
   font-family: 'Montserrat', sans-serif;
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: 800;
   color: var(--neon-pink);
-  text-shadow: 0 0 8px rgba(255,125,220,0.6), 0 2px 4px rgba(0,0,0,0.4);
+  text-shadow: 
+    0 0 10px rgba(255,125,220,0.8),
+    0 0 20px rgba(255,125,220,0.6),
+    0 0 30px rgba(255,125,220,0.4),
+    0 0 40px rgba(255,125,220,0.3),
+    0 0 50px rgba(255,125,220,0.2),
+    0 0 60px rgba(255,125,220,0.1),
+    0 2px 4px rgba(0,0,0,0.4);
   margin-bottom: 1.5rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   opacity: 0;
   transform: translateY(30px) scale(0.9);
-  animation: titleSlideIn 0.8s forwards ease-out;
+  animation: titleSlideIn 0.8s forwards ease-out, phosphorescentGlow 3s ease-in-out infinite 1s;
+  filter: drop-shadow(0 0 20px rgba(255,125,220,0.5));
 
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   @media (max-width: 480px) {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 `;
 
