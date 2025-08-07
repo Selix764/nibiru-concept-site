@@ -220,14 +220,14 @@ const HeroTitle = styled(motion.h1)`
   font-family: 'Montserrat', sans-serif;
   font-size: 5rem;
   font-weight: 800;
-  color: var(--white);
+  color: var(--neon-pink);
   text-shadow: 0 0 8px rgba(255,125,220,0.6), 0 2px 4px rgba(0,0,0,0.4);
   margin-bottom: 1.5rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s forwards ease-out;
+  transform: translateY(30px) scale(0.9);
+  animation: titleSlideIn 0.8s forwards ease-out;
 
   @media (max-width: 768px) {
     font-size: 3rem;
@@ -246,8 +246,8 @@ const HeroSubtitle = styled(motion.div)`
   margin-bottom: 2rem;
   text-shadow: 0 0 15px var(--neon-blue);
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s forwards ease-out 0.2s;
+  transform: translateX(-50px);
+  animation: subtitleSlideIn 0.7s forwards ease-out 0.3s;
 `;
 
 const HeroDescription = styled(motion.p)`
@@ -258,8 +258,8 @@ const HeroDescription = styled(motion.p)`
   margin-bottom: 3rem;
   line-height: 1.8;
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s forwards ease-out 0.4s;
+  transform: translateX(50px);
+  animation: descriptionSlideIn 0.7s forwards ease-out 0.5s;
 `;
 
 const HeroButtons = styled(motion.div)`
@@ -269,8 +269,8 @@ const HeroButtons = styled(motion.div)`
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s forwards ease-out 0.6s;
+  transform: scale(0.8);
+  animation: buttonsScaleIn 0.6s forwards ease-out 0.7s;
 
   @media (max-width: 768px) {
     gap: 1rem;

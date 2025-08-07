@@ -56,14 +56,7 @@ const LogoImage = styled.img`
   }
 `;
 
-const LogoText = styled.div`
-  font-family: 'Orbitron', monospace;
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--white);
-  text-shadow: 0 0 15px var(--neon-pink), 0 0 25px var(--neon-pink);
-  letter-spacing: 2px;
-`;
+
 
 const NavMenu = styled.ul<{ isOpen: boolean }>`
   display: flex;

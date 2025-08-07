@@ -205,4 +205,36 @@ export const GlobalStyles = createGlobalStyle`
       transform: translateY(0); 
     }
   }
+
+  /* Title slide in animation */
+  @keyframes titleSlideIn {
+    to { 
+      opacity: 1; 
+      transform: translateY(0) scale(1); 
+    }
+  }
+
+  /* Subtitle slide in from left */
+  @keyframes subtitleSlideIn {
+    to { 
+      opacity: 1; 
+      transform: translateX(0); 
+    }
+  }
+
+  /* Description slide in from right */
+  @keyframes descriptionSlideIn {
+    to { 
+      opacity: 1; 
+      transform: translateX(0); 
+    }
+  }
+
+  /* Buttons scale in animation */
+  @keyframes buttonsScaleIn {
+    to { 
+      opacity: 1; 
+      transform: scale(1); 
+    }
+  }
 `; 
