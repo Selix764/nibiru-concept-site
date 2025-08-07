@@ -165,7 +165,7 @@ const Planet1 = styled(NibiruPlanet)`
 const Planet2 = styled(SaturnPlanet)`
   width: 160px;
   height: 160px;
-  bottom: 25%;
+  bottom: 50%;
   left: 15%;
   animation-delay: 3s;
 `;

@@ -59,7 +59,7 @@ const Stars = styled.div`
 const Planet2 = styled(SaturnPlanet)`
   width: 160px;
   height: 160px;
-  bottom: 25%; /* Schimbat de la 15% */
+  bottom: 50%; /* Schimbat de la 25% - acum în mijlocul hero section */
   left: 15%;
   animation-delay: 3s;
 `;
@@ -67,8 +67,9 @@ const Planet2 = styled(SaturnPlanet)`
 
 #### **Beneficii**
 - **Vizibilitate Completă**: Saturn nu mai este acoperit de navbar
-- **Spațiere Îmbunătățită**: Mai mult spațiu între elemente
-- **Compoziție Mai Bună**: Distribuție mai echilibrată
+- **Poziție Centrală**: Saturn este acum în mijlocul hero section
+- **Compoziție Îmbunătățită**: Distribuție mai echilibrată cu celelalte planete
+- **Impact Vizual**: Saturn este mai vizibil și mai impactant
 
 ## 🎨 Efecte Vizuale
 
@@ -80,8 +81,9 @@ const Planet2 = styled(SaturnPlanet)`
 
 ### **Saturn Repoziționat**
 - **Vizibilitate**: Complet vizibil sub navbar
-- **Spațiere**: Mai mult spațiu pentru conținut
+- **Poziție**: În mijlocul hero section pentru impact maxim
 - **Compoziție**: Distribuție mai echilibrată cu celelalte planete
+- **Impact**: Saturn este acum elementul central al compoziției
 
 ### **Logo Simplificat**
 - **Curățenie**: Design mai minimalist
@@ -124,7 +126,7 @@ const Planet2 = styled(SaturnPlanet)`
 **Testare**:
 1. **Logo Simplificat**: Verifică că doar imaginea logo este vizibilă
 2. **Stelele Complete**: Verifică că stelele nu sunt tăiate
-3. **Saturn Vizibil**: Verifică că Saturn nu este acoperit de navbar
+3. **Saturn Central**: Verifică că Saturn este în mijlocul hero section
 4. **Responsive**: Testează pe mobile pentru adaptare
 5. **Performance**: Verifică că animațiile sunt smooth
 
@@ -132,7 +134,7 @@ const Planet2 = styled(SaturnPlanet)`
 
 - **Logo Simplificat**: Doar imaginea cu textul integrat
 - **Stelele Complete**: Pattern dens și natural fără tăiere
-- **Saturn Repoziționat**: Complet vizibil sub navbar
+- **Saturn Central**: Poziționat în mijlocul hero section pentru impact maxim
 - **Design Curat**: Aspect minimalist și elegant
 - **Compoziție Echilibrată**: Distribuție vizuală optimă
 - **Performance Optimized**: Rendering eficient
