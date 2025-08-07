@@ -165,7 +165,7 @@ const Planet1 = styled(NibiruPlanet)`
 const Planet2 = styled(SaturnPlanet)`
   width: 160px;
   height: 160px;
-  bottom: 10%;
+  bottom: 5%;
   left: 15%;
   animation-delay: 3s;
 `;
@@ -194,7 +194,8 @@ const Stars = styled.div`
     radial-gradient(2px 2px at 280px 50px, #eee, transparent),
     radial-gradient(1px 1px at 300px 10px, rgba(255,255,255,0.9), transparent);
   background-repeat: repeat;
-  background-size: 300px 150px;
+  background-size: 300px 200px;
+  background-position: 0 0;
   animation: twinkle 4s ease-in-out infinite;
 `;
 
