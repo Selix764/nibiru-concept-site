@@ -435,6 +435,7 @@ const Hero: React.FC = () => {
         <Planet2>
           <SaturnRings />
         </Planet2>
+        <Planet3 />
         <Stars />
         {particles.map(particle => (
           <Particle
