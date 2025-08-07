@@ -71,7 +71,7 @@ const AboutUsContent = styled.div`
   }
 `;
 
-const AboutUsText = styled.div`
+const AboutUsText = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -288,31 +288,17 @@ const AboutUs: React.FC = () => {
         delayChildren: 0.1
       }
     }
-  } as const;
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const
-      }
-    }
-  } as const;
+    visible: { opacity: 1, y: 0 }
+  };
 
   const statsVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut" as const
-      }
-    }
-  } as const;
+    visible: { opacity: 1, scale: 1 }
+  };
 
   return (
     <AboutUsSection id="about">
