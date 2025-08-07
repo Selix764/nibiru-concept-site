@@ -59,7 +59,7 @@ const Stars = styled.div`
 const Planet2 = styled(SaturnPlanet)`
   width: 160px;
   height: 160px;
-  bottom: 50%; /* Schimbat de la 25% - acum în mijlocul hero section */
+  bottom: 10%; /* Schimbat de la 50% - acum aproape de partea de jos */
   left: 15%;
   animation-delay: 3s;
 `;
@@ -67,9 +67,9 @@ const Planet2 = styled(SaturnPlanet)`
 
 #### **Beneficii**
 - **Vizibilitate Completă**: Saturn nu mai este acoperit de navbar
-- **Poziție Centrală**: Saturn este acum în mijlocul hero section
+- **Poziție Inferioară**: Saturn este acum aproape de partea de jos a hero section
 - **Compoziție Îmbunătățită**: Distribuție mai echilibrată cu celelalte planete
-- **Impact Vizual**: Saturn este mai vizibil și mai impactant
+- **Spațiere Optimă**: Mai mult spațiu pentru conținutul principal
 
 ## 🎨 Efecte Vizuale
 
@@ -81,9 +81,9 @@ const Planet2 = styled(SaturnPlanet)`
 
 ### **Saturn Repoziționat**
 - **Vizibilitate**: Complet vizibil sub navbar
-- **Poziție**: În mijlocul hero section pentru impact maxim
+- **Poziție**: Aproape de partea de jos a hero section
 - **Compoziție**: Distribuție mai echilibrată cu celelalte planete
-- **Impact**: Saturn este acum elementul central al compoziției
+- **Spațiere**: Mai mult spațiu pentru conținutul principal
 
 ### **Logo Simplificat**
 - **Curățenie**: Design mai minimalist
@@ -126,7 +126,7 @@ const Planet2 = styled(SaturnPlanet)`
 **Testare**:
 1. **Logo Simplificat**: Verifică că doar imaginea logo este vizibilă
 2. **Stelele Complete**: Verifică că stelele nu sunt tăiate
-3. **Saturn Central**: Verifică că Saturn este în mijlocul hero section
+3. **Saturn Inferior**: Verifică că Saturn este aproape de partea de jos
 4. **Responsive**: Testează pe mobile pentru adaptare
 5. **Performance**: Verifică că animațiile sunt smooth
 
@@ -134,7 +134,7 @@ const Planet2 = styled(SaturnPlanet)`
 
 - **Logo Simplificat**: Doar imaginea cu textul integrat
 - **Stelele Complete**: Pattern dens și natural fără tăiere
-- **Saturn Central**: Poziționat în mijlocul hero section pentru impact maxim
+- **Saturn Inferior**: Poziționat aproape de partea de jos pentru spațiere optimă
 - **Design Curat**: Aspect minimalist și elegant
 - **Compoziție Echilibrată**: Distribuție vizuală optimă
 - **Performance Optimized**: Rendering eficient
