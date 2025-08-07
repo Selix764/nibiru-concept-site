@@ -20,7 +20,7 @@ const NavWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  height: 80px;
+  height: 90px;
 `;
 
 const Logo = styled.div`
@@ -41,16 +41,18 @@ const Logo = styled.div`
 `;
 
 const LogoImage = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 0 20px rgba(255, 0, 128, 0.6);
+  box-shadow: 0 0 25px rgba(255, 0, 128, 0.7);
   transition: all 0.3s ease;
+  border: 2px solid rgba(255, 0, 128, 0.3);
 
   &:hover {
-    box-shadow: 0 0 30px rgba(255, 0, 128, 0.8);
-    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 0, 128, 0.9);
+    transform: scale(1.1);
+    border-color: rgba(255, 0, 128, 0.6);
   }
 `;
 
@@ -74,7 +76,7 @@ const NavMenu = styled.ul<{ isOpen: boolean }>`
   @media (max-width: 768px) {
     position: fixed;
     left: ${props => props.isOpen ? '0' : '-100%'};
-    top: 80px;
+    top: 90px;
     flex-direction: column;
     background-color: rgba(10, 10, 10, 0.95);
     width: 100%;

@@ -11,16 +11,18 @@
 #### **Design Imagine**
 ```css
 const LogoImage = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 0 20px rgba(255, 0, 128, 0.6);
+  box-shadow: 0 0 25px rgba(255, 0, 128, 0.7);
   transition: all 0.3s ease;
+  border: 2px solid rgba(255, 0, 128, 0.3);
 
   &:hover {
-    box-shadow: 0 0 30px rgba(255, 0, 128, 0.8);
-    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 0, 128, 0.9);
+    transform: scale(1.1);
+    border-color: rgba(255, 0, 128, 0.6);
   }
 `;
 ```
@@ -28,8 +30,9 @@ const LogoImage = styled.img`
 #### **Efecte Imagine**
 - **Object Fit**: Cover pentru aspect perfect
 - **Border Radius**: 50% pentru formă circulară
-- **Box Shadow**: Glow neon roz pentru efect cosmic
-- **Hover Effects**: Glow intensificat și scale
+- **Box Shadow**: Glow neon roz intensificat pentru efect cosmic
+- **Border**: Border neon roz pentru accent vizual
+- **Hover Effects**: Glow și border intensificate, scale mărit
 
 #### **Design Logo**
 ```css
@@ -70,9 +73,10 @@ const LogoImage = styled.img`
 
 ### **Imaginea NIBIRU**
 - **Sursă**: `/public/nibiru-logo.jpg` cu textul integrat
-- **Dimensiune**: 40x40px pentru navbar compact
+- **Dimensiune**: 60x60px pentru vizibilitate optimă
 - **Format**: JPG cu aspect cosmic și futurist
-- **Glow**: Efecte de lumină neon roz
+- **Glow**: Efecte de lumină neon roz intensificate
+- **Border**: Border neon roz pentru accent vizual
 
 ### **Container Logo**
 - **Layout**: Flex cu gap de 0.8rem
