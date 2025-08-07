@@ -197,4 +197,12 @@ export const GlobalStyles = createGlobalStyle`
     0% { transform: rotateX(75deg) rotate(0deg); }
     100% { transform: rotateX(75deg) rotate(360deg); }
   }
+
+  /* Fade in up animation */
+  @keyframes fadeInUp {
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
 `; 

@@ -9,6 +9,15 @@ const HeroSection = styled.section`
   justify-content: center;
   position: relative;
   overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+    pointer-events: none;
+    z-index: 1;
+  }
 `;
 
 const HeroBackground = styled.div`
@@ -203,20 +212,22 @@ const HeroContent = styled(motion.div)`
   text-align: center;
   z-index: 2;
   max-width: 800px;
-  padding: 0 20px;
+  padding: 0 3rem;
+  position: relative;
 `;
 
 const HeroTitle = styled(motion.h1)`
-  font-family: 'Orbitron', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 5rem;
-  font-weight: 900;
+  font-weight: 800;
   color: var(--white);
-  text-shadow: 
-    0 0 20px var(--neon-pink),
-    0 0 40px var(--neon-pink),
-    0 0 60px var(--neon-pink);
-  margin-bottom: 1rem;
-  animation: title-glow 3s ease-in-out infinite alternate;
+  text-shadow: 0 0 8px rgba(255,125,220,0.6), 0 2px 4px rgba(0,0,0,0.4);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards ease-out;
 
   @media (max-width: 768px) {
     font-size: 3rem;
@@ -228,28 +239,76 @@ const HeroTitle = styled(motion.h1)`
 `;
 
 const HeroSubtitle = styled(motion.div)`
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
+  font-weight: 300;
   color: var(--neon-blue);
   margin-bottom: 2rem;
   text-shadow: 0 0 15px var(--neon-blue);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards ease-out 0.2s;
 `;
 
 const HeroDescription = styled(motion.p)`
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
+  font-weight: 400;
   color: var(--gray);
   margin-bottom: 3rem;
   line-height: 1.8;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards ease-out 0.4s;
 `;
 
 const HeroButtons = styled(motion.div)`
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards ease-out 0.6s;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
+    gap: 1rem;
+  }
+`;
+
+const PrimaryButton = styled(motion.button)`
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--white);
+  background: transparent;
+  border: 2px solid #FF7DDC;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  &:hover {
+    box-shadow: 0 0 12px #FF7DDC;
+    transform: translateY(-2px);
+  }
+`;
+
+const SecondaryLink = styled(motion.a)`
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--neon-blue);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+    text-shadow: 0 0 8px var(--neon-blue);
   }
 `;
 
@@ -403,54 +462,34 @@ const Hero: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <HeroTitle
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 1 }}
-        >
+        <HeroTitle>
           NIBIRU
         </HeroTitle>
         
-        <HeroSubtitle
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-        >
+        <HeroSubtitle>
           Destinația Cosmică de Petreceri
         </HeroSubtitle>
         
-        <HeroDescription
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2 }}
-        >
+        <HeroDescription>
           Experiența premium de viață de noapte din Mamaia.<br />
           Atmosferă futuristă, energie cosmică, exclusivitate absolută.
         </HeroDescription>
         
-        <HeroButtons
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 2.5 }}
-        >
-          <motion.a
-            href="#contact"
-            className="btn btn-primary"
+        <HeroButtons>
+          <PrimaryButton
             onClick={handleContactClick}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Rezervă Acum
-          </motion.a>
-          <motion.a
-            href="#events"
-            className="btn btn-secondary"
-            onClick={handleEventsClick}
+          </PrimaryButton>
+          <SecondaryLink
+            href="#services"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Evenimente
-          </motion.a>
+            Despre Nibiru →
+          </SecondaryLink>
         </HeroButtons>
       </HeroContent>
 
